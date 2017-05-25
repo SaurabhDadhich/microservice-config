@@ -20,6 +20,10 @@ security:
 zuul:
   ignoredServices: '*'
   routes:
+    user-service:
+      path: /user-service/**
+      stripPrefix: false
+      serviceId: user-service
     user:
       path: /api/loggedinuser/**
       stripPrefix: true
@@ -28,10 +32,7 @@ zuul:
       path: /**
       stripPrefix: false
       serviceId: web-portal
-    user-service:
-      path: /user-service/**
-      stripPrefix: false
-      serviceId: user-service
+      
 spring:
   aop:
     proxy-target-class: true
