@@ -32,6 +32,10 @@ zuul:
       path: /**
       stripPrefix: false
       serviceId: web-portal
+    task-service:
+      path: /task-service/**
+      stripPrefix: false
+      serviceId: task-service
       
 spring:
   aop:
